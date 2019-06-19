@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0 (2019-06-19)
+
+
+### Features
+
+* **run deps:** Remove sudo ([bd472ee](https://github.com/aptx4869/zt-dev-build-images/commit/bd472ee))
+* Remove slimerjs ([a31e5ca](https://github.com/aptx4869/zt-dev-build-images/commit/a31e5ca))
+
+
+### BREAKING CHANGES
+
+* **run deps:** Remove sudo
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](/compare/v0.1.0...v1.0.0) (2019-06-19)
 
