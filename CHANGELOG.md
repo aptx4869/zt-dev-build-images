@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://gitlab.local/aptx4869/zt-dev-build-images/compare/v2.0.0...v2.1.0) (2019-06-19)
+
+
+### Bug Fixes
+
+* **release script:** Make chroe commit instead of commit --amend ([e41d4dd](https://gitlab.local/aptx4869/zt-dev-build-images/commit/e41d4dd))
+
+
+### Features
+
+* **run deps:** Add google-chrome ([e3c6f2c](https://gitlab.local/aptx4869/zt-dev-build-images/commit/e3c6f2c))
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2019-06-19)
 

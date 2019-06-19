@@ -32,3 +32,6 @@
 ### jq
 1.5-1
 
+### google-chrome
+stable
+

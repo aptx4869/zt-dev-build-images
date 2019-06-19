@@ -2,7 +2,7 @@ FROM ruby:2.6
 
 MAINTAINER aptx4869 'ling548@gmail.com'
 
-ENV VERSION='2.0.0'
+ENV VERSION='2.1.0'
 
 # RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free" > /etc/apt/sources.list
 
@@ -50,6 +50,11 @@ RUN set -ex \
       && apt-get install -y nodejs \
       && apt-get install -y yarn \
       && yarn global add coffeescript js-yaml
+
+# Googel Chrome
+ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /tmp/
+RUN dpkg -i /tmp/google-chrome*.deb
+ENV CHROME_BIN /usr/bin/google-chrome
 
 # clean up
 RUN set -ex \
