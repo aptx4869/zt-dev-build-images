@@ -20,9 +20,6 @@
 ### mongodb-shell
 4.0.10
 
-### sudo
-1.8
-
 ### postgresql-client
 9.6
 

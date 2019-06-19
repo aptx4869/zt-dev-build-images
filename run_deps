@@ -58,5 +58,4 @@ postgresql-client
 python3-pip
 rsync
 sqlite3
-sudo
 xvfb

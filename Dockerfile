@@ -2,7 +2,7 @@ FROM ruby:2.6
 
 MAINTAINER aptx4869 'ling548@gmail.com'
 
-ENV VERSION='0.1.0'
+ENV VERSION='1.0.0'
 
 # RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free" > /etc/apt/sources.list
 
