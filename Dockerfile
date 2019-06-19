@@ -2,7 +2,7 @@ FROM ruby:2.6
 
 MAINTAINER aptx4869 'ling548@gmail.com'
 
-ENV VERSION='1.0.0'
+ENV VERSION='2.0.0'
 
 # RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free" > /etc/apt/sources.list
 
@@ -49,7 +49,7 @@ RUN set -ex \
       && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
       && apt-get install -y nodejs \
       && apt-get install -y yarn \
-      && yarn global add coffeescript js-yaml slimerjs
+      && yarn global add coffeescript js-yaml
 
 # clean up
 RUN set -ex \
