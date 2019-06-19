@@ -1,0 +1,9 @@
+build:image:
+  script:
+    - docker build .
+    - docker images
+
+image: docker:latest
+
+services:
+  - docker:dind

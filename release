@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'json'
+
+# manage Dockerfile version and update dependencies in README.md
+class VersionManager
+  attr_reader :version
+
+  def run(version)
+    @version = version
+    update_dockerfile_version
+    update_readme
+  end
+
+  def new_tags
+    ARGV.join('/')
+  end
+
+  def old_dependencies
+    @old_dependencies ||= _old_dependencies
+  end
+
+  def update_dockerfile_version
+    system %(sed -i "s/ENV VERSION='.*'/ENV VERSION='#{version}'/g" Dockerfile)
+  end
+
+  def dependencies
+    new_dependencies = new_tags.split('/').map { |item| item.split('@') }
+    old_dependencies.concat(new_dependencies)
+  end
+
+  def update_readme
+    old_dependencies
+    File.open('README.md', 'w') do |file|
+      file.puts <<~DOC
+        # Image for GitlabCI
+
+        ## Dependencies
+
+      DOC
+      dependencies.each do |dependence|
+        file.puts "### #{dependence[0]}\n"
+        file.puts "#{dependence[1]}\n\n"
+      end
+    end
+  end
+
+  def _old_dependencies
+    File
+      .readlines('README.md')[4..-1]
+      .each_slice(3)
+      .map { |i| [i[0].gsub(/^### /, '').delete("\n"), i[1].delete("\n")] }
+  end
+end
+
+# Commit with git-cz and tag latest
+class ReleaseRunner
+  RELEASE_TAG = /\A..tagging release v([0-9.]+)\Z/.freeze
+  def run
+    new_version = commit_new_version
+    VersionManager.new.run(new_version)
+    ammend_new_file_and_tag_latest
+  end
+
+  def commit_new_version
+    system 'git add Dockerfile'
+    system 'git-cz'
+    `standard-version --dry-run`
+      .lines.grep(RELEASE_TAG).first.match(RELEASE_TAG)[1]
+  end
+
+  def ammend_new_file_and_tag_latest
+    system 'git add README.md Dockerfile'
+    system 'git commit --amend'
+    system 'standard-version'
+    system 'git tag -d latest'
+    system 'git tag latest'
+  end
+end
+
+ReleaseRunner.new.run
+puts "\n== Released ==\n"
+
+puts '== Push to Github =='
+system 'git push origin :refs/tags/latest'
+system 'git push'
+system 'git push --tags'
+puts '== Pushed to Github =='
