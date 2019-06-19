@@ -73,8 +73,8 @@ class ReleaseRunner
   def ammend_new_file_and_tag_latest
     system 'git add README.md Dockerfile'
     system 'git commit --amend'
-    system 'standard-version'
     system 'git tag -d latest'
+    system 'standard-version'
     system 'git tag latest'
   end
 end
