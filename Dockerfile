@@ -51,6 +51,11 @@ RUN set -ex \
       && apt-get install -y yarn \
       && yarn global add coffeescript js-yaml
 
+# Googel Chrome
+ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /tmp/
+RUN dpkg -i /tmp/google-chrome*.deb
+ENV CHROME_BIN /usr/bin/google-chrome
+
 # clean up
 RUN set -ex \
       && export BUILD_DEPS="$(cat /tmp/build_deps)" \
