@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.0"></a>
+# [2.3.0](https://gitlab.com/aptx48691/zt-dev-build-images/compare/v2.2.0...v2.3.0) (2019-06-25)
+
+
+### Bug Fixes
+
+* **run deps:** Add libpq-dev for gem `pg' ([766e04b](https://gitlab.com/aptx48691/zt-dev-build-images/commit/766e04b))
+
+
+### Features
+
+* **run deps:** Add google-chrome ([fa2041f](https://gitlab.com/aptx48691/zt-dev-build-images/commit/fa2041f))
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://gitlab.com/aptx48691/zt-dev-build-images/compare/v2.1.0...v2.2.0) (2019-06-25)
 
