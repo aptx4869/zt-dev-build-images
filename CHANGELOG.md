@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.2.0"></a>
+# [2.2.0](https://gitlab.com/aptx48691/zt-dev-build-images/compare/v2.1.0...v2.2.0) (2019-06-25)
+
+
+### Features
+
+* **run deps:** Add missing deps for gem `image_optim' & `charlock_holmes' ([b15373f](https://gitlab.com/aptx48691/zt-dev-build-images/commit/b15373f))
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://gitlab.local/aptx4869/zt-dev-build-images/compare/v2.0.0...v2.1.0) (2019-06-19)
 
