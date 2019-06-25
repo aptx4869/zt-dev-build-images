@@ -61,6 +61,7 @@ libpangoxft-1.0-0
 libpng16-16
 libpoppler-glib8
 libpoppler64
+libpq-dev
 libpq5
 libreadline7
 librsvg2-2
