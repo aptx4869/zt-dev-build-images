@@ -7,7 +7,6 @@ libfftw3-dev
 libgdbm-dev
 libgif-dev
 libgsf-1-dev
-libicu-dev
 libjpeg-dev
 liblcms2-dev
 libmatio-dev

@@ -1,3 +1,4 @@
+advancecomp
 apt-transport-https
 autoconf
 automake
@@ -9,10 +10,12 @@ ffmpeg
 fonts-liberation
 g++
 gawk
+gifsicle
 git
 gnupg2
 graphicsmagick
 imagemagick
+jhead
 jpegoptim
 jq
 libappindicator3-1
@@ -39,7 +42,9 @@ libgif7
 libglib2.0-0
 libgsf-1-114
 libgtk-3-0
+libicu-dev
 libicu57
+libjpeg-progs
 libjpeg62-turbo
 liblcms2-2
 libmatio4
@@ -85,6 +90,8 @@ lsb-release
 mediainfo
 optipng
 pkg-config
+pngcrush
+pngquant
 postgresql-client
 python3-pip
 rsync
