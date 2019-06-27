@@ -17,7 +17,6 @@ libpango1.0-dev
 libpng-dev
 libpoppler-dev
 libpoppler-glib-dev
-libpq-dev
 libreadline-dev
 librsvg2-dev
 libsqlite3-dev
