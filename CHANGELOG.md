@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://gitlab.com/aptx48691/zt-dev-build-images/compare/v2.3.2...v2.4.0) (2019-06-27)
+
+
+### Features
+
+* **run deps:** Add redis-tools ([2a7286d](https://gitlab.com/aptx48691/zt-dev-build-images/commit/2a7286d))
+
+
+
 ### [2.3.2](https://gitlab.com/aptx48691/zt-dev-build-images/compare/v2.3.0...v2.3.2) (2019-06-27)
 
 
