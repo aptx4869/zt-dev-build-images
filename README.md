@@ -35,3 +35,6 @@
 ### google-chrome
 stable
 
+### redis-tools
+3.2.6
+
