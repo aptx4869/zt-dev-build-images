@@ -95,6 +95,7 @@ pngcrush
 pngquant
 postgresql-client
 python3-pip
+redis-tools
 rsync
 sqlite3
 wget
