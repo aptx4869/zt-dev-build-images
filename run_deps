@@ -69,6 +69,8 @@ libtiff5
 libtiffxx5
 libtool
 libuuid1
+libvips-dev
+libvips42
 libwebp6
 libwebpdemux2
 libwebpmux3

@@ -17,19 +17,6 @@ RUN set -ex \
       && apt-get install -y --no-install-recommends $RUN_DEPS \
       && pip3 install you-get --upgrade
 
-# Libvips
-ADD https://github.com/libvips/libvips/releases/download/v8.8.0/vips-8.8.0.tar.gz /tmp/
-# COPY vips-8.8.0.tar.gz /tmp/
-RUN set -ex \
-      && cd /tmp \
-      && tar xf vips-8.8.0.tar.gz \
-      && cd vips-8.8.0 \
-      && ./configure --prefix=/usr/ \
-      && make \
-      && make install \
-      && ldconfig \
-      && pkg-config --list-all | grep 'vips'
-
 # bundler
 RUN gem install bundler --no-document
 
