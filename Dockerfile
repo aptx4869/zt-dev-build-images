@@ -33,7 +33,7 @@ RUN set -ex \
       && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 \
       && curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
       && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-      && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+      && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
       && apt-get install -y nodejs \
       && apt-get install -y yarn \
       && yarn global add coffeescript js-yaml
