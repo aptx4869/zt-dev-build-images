@@ -2,7 +2,7 @@ FROM ruby:3.0
 
 MAINTAINER aptx4869 'ling548@gmail.com'
 
-ENV VERSION='2.4.0'
+ENV VERSION='3.0.0'
 
 # RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
 
