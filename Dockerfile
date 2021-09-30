@@ -1,10 +1,10 @@
-FROM ruby:2.6
+FROM ruby:3.0
 
 MAINTAINER aptx4869 'ling548@gmail.com'
 
 ENV VERSION='2.4.0'
 
-# RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free" > /etc/apt/sources.list
+# RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
 
 COPY build_deps /tmp/
 COPY run_deps /tmp/
